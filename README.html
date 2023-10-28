@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<center> <u> <h1 style="font-size: 50px;"> Postgres setup</h1> </u> </center>
+<h2 id="table-of-contents">Table of contents</h2>
+<p><strong>1. Task requirement</strong></p>
+<p><strong>2. Environment details</strong></p>
+<p><strong>3. System configuration</strong></p>
+<p><strong>4. Definition of tools</strong></p>
+<h2 id="1-task-requirement-podmanpostgres">1. Task requirement: Podman.Postgres</h2>
+<h2 id="2-environment-details">2. Environment details:</h2>
+<ul>
+<li>Os:- Ubuntu 22.04.3 LTS</li>
+<li>Podman- 3.4.4</li>
+<li>Psql (PostgreSQL) 14.9</li>
+</ul>
+<h2 id="3-system-configuration">3. System configuration:</h2>
+<ul>
+<li>CPU - 4</li>
+<li>Storage -16 GB</li>
+</ul>
+<h2 id="4-definition-of-tools">4. Definition of tools:</h2>
+<ul>
+<li>
+<p>Podman is an open-source container management tool used to create, run, and manage containers on Linux systems.</p>
+</li>
+<li>
+<p>PostgreSQL ek open-source relational database management system (RDBMS)
+hai jo data storage aur management ke liye istemal hota hai.</p>
+</li>
+</ul>
+<h2 id="1-create-a-postgres-container-with-podman">1. Create a postgres container with podman</h2>
+<pre class="hljs"><code><div>sudo apt install -y podman
+</div></code></pre>
+<p><img src="1.png" alt=""></p>
+<pre class="hljs"><code><div>podman version
+</div></code></pre>
+<p><img src="2.png" alt=""></p>
+<pre class="hljs"><code><div>podman run --name postgres-container -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 docker.io/library/postgres:latest
+
+</div></code></pre>
+<p><img src="3.png" alt=""></p>
+<ul>
+<li>podman run: Ye command ek container ko create aur run karne ke liye use hoti hai.</li>
+<li>-d: Ye option container ko background mode me run karne ke liye use hota hai, matlab container run hoga aur aapka terminal available rahega.</li>
+<li>--name my-postgres: Is option se aap apne container ko &quot;my-postgres&quot; naam se identify kar sakte hain.</li>
+<li>-e POSTGRES_PASSWORD=mysecretpassword: Is option se aap environment variable set kar rahe hain, jiska naam &quot;POSTGRES_PASSWORD&quot; hai aur value &quot;mysecretpassword&quot; hai. Ye password PostgreSQL database access ke liye use hoga.</li>
+<li>-v /mydata:/var/lib/postgresql/data: Is option se aap ek volume mount kar rahe hain. /mydata host system ke path ko /var/lib/postgresql/data container ke path se map karega. Isse aap apne database data ko host system me store kar sakte hain, taki wo persist kare, aur aap container ko delete karne ke baad bhi data safe rahe.</li>
+<li>'postgres:14: Ye image name hai, jise aap container se use kar rahe hain. &quot;postgres:14&quot; PostgreSQL ke version 14 ke official Docker image ko represent karta hai. Isse container PostgreSQL database server ke sath run karega.</li>
+</ul>
+<h2 id="verify-that-the-postgresql-container-is-running">Verify that the PostgreSQL container is running:</h2>
+<pre class="hljs"><code><div>podman ps
+</div></code></pre>
+<p><img src="4.png" alt=""></p>
+<h2 id="2create-usersdatabasestablesextensions-on-the-same">2.create users,databases,tables,extensions on the same.</h2>
+<pre class="hljs"><code><div>podman exec -it postgres-container psql -U postgres
+
+</div></code></pre>
+<p><img src="5.png" alt=""></p>
+<h2 id="a-create-users">(a) Create Users</h2>
+<pre class="hljs"><code><div>CREATE USER noida WITH PASSWORD 'noida1';
+CREATE USER delhi WITH PASSWORD 'delhi1';
+CREATE USER gurugram WITH PASSWORD 'gurugram1';
+</div></code></pre>
+<p><img src="6.png" alt=""></p>
+<h2 id="b-databases">(b) Databases</h2>
+<pre class="hljs"><code><div>CREATE DATABASE my_database;
+
+</div></code></pre>
+<p><img src="7.png" alt=""></p>
+<h2 id="c-tables">(c) Tables</h2>
+<pre class="hljs"><code><div>\c my_database;
+</div></code></pre>
+<pre class="hljs"><code><div>     CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100) UNIQUE
+);
+
+
+</div></code></pre>
+<p><img src="9.png" alt=""></p>
+<ul>
+<li>
+<p>CREATE TABLE: This keyword tells the database to create a new table.</p>
+</li>
+<li>
+<p>my_table: This is the name of the table that is being created.</p>
+</li>
+<li>
+<p>( id SERIAL NOT NULL PRIMARY KEY, name VARCHAR(255) NOT NULL ): This is the definition of the table, which includes the names and data types of the columns in the table.</p>
+</li>
+</ul>
+<h3 id="here-is-a-more-detailed-explanation-of-each-part-of-the-statement">Here is a more detailed explanation of each part of the statement:</h3>
+<ul>
+<li>
+<p>id SERIAL NOT NULL PRIMARY KEY: This column will store the unique identifier for each row in the table. The SERIAL data type means that the database will automatically generate a unique integer value for each new row that is inserted into the table. The NOT NULL constraint means that this column cannot be empty. The PRIMARY KEY constraint means that this column uniquely identifies each row in the table.</p>
+</li>
+<li>
+<p>name VARCHAR(255) NOT NULL: This column will store the name of each row in the table. The VARCHAR(255) data type means that this column can store up to 255 characters of text. The NOT NULL constraint means that this column cannot be empty.</p>
+</li>
+</ul>
+<h2 id="d-extensions">(d)  extensions</h2>
+<pre class="hljs"><code><div>CREATE EXTENSION pg_trgm;
+</div></code></pre>
+<p><img src="10.png" alt=""></p>
+<p><strong>EXTENSION</strong>  Ye SQL statement PostgreSQL database mein ek extension ko create karne ya activate karne ke liye istemal hota hai. Extension ek prakar ke additional modules ya functions hote hain jo PostgreSQL database functionality ko extend karte hain.</p>
+<p><strong>pg_trgm</strong>  Ye extension PostgreSQL mein full-text search aur trigram similarity capabilities provide karta hai.
+Full-text search ka use karke, aap apne data mein text ko search kar sakte hain. Trigram similarity ka use karke, aap apne data mein text ke similarity ko calculate kar sakte hain.
+In capabilities ka use karne ke kai liye hai. For example, aap ine capabilities ka use karke ek website mein contents ko search kar sakte hain, ek database mein data ko search kar sakte hain, ya ek document collection mein documents ko search kar sakte hain.</p>
+<h3 id="3perform-crud-operations">3.Perform crud operations.</h3>
+<p><strong>CRUD (Create, Read, Update, Delete)</strong></p>
+<h3 id="acreate">(a)Create</h3>
+<pre class="hljs"><code><div>INSERT INTO users (first_name, last_name, email) VALUES ('John', 'Doe', 'john.doe@example.com');
+
+</div></code></pre>
+<p><img src="11.png" alt=""></p>
+<ul>
+<li>id: A serial column that is the primary key of the table. This means that each row in the table will have a unique id value.</li>
+<li>name: A VARCHAR column that stores the name of the hospital.</li>
+<li>address: A VARCHAR column that stores the address of the hospital.</li>
+<li>phone: A VARCHAR column that stores the phone number of the hospital.</li>
+<li>NOT NULL: constraint on all of the columns means that each column must have a value. No rows will be inserted into the table if any of the columns are empty.</li>
+<li>VARCHAR : is a variable-length string data type in SQL. It means that it can store strings of any length, up to the maximum length specified when the column is created. It is a good choice for storing strings of variable length, such as names, addresses, and phone numbers.</li>
+</ul>
+<h2 id="b-read">(b) Read</h2>
+<pre class="hljs"><code><div>SELECT * FROM users;
+
+</div></code></pre>
+<p><img src="12.png" alt=""></p>
+<h2 id="c--update">(C ) Update</h2>
+<pre class="hljs"><code><div>UPDATE users SET email = 'new.email@example.com' WHERE id = 1;
+
+</div></code></pre>
+<p><img src="13.png" alt=""></p>
+<h2 id="d-delete">(D) Delete</h2>
+<pre class="hljs"><code><div>DELETE FROM users WHERE id = 1;
+
+</div></code></pre>
+<p><img src="14.png" alt=""></p>
+<h2 id="4-create-three-users-with-a-password">4. Create three users with a password.</h2>
+<pre class="hljs"><code><div>CREATE ROLE user1 WITH LOGIN PASSWORD 'password1';
+</div></code></pre>
+<p><img src="15.png" alt=""></p>
+<pre class="hljs"><code><div>CREATE ROLE user2 WITH LOGIN PASSWORD 'password2';
+
+</div></code></pre>
+<p><img src="16.png" alt=""></p>
+<pre class="hljs"><code><div>CREATE ROLE user3 WITH LOGIN PASSWORD 'password3';
+
+</div></code></pre>
+<p><img src="17.png" alt=""></p>
+<pre class="hljs"><code><div>\du
+</div></code></pre>
+<p><img src="18.png" alt=""></p>
+<ul>
+<li>show user</li>
+</ul>
+<h2 id="5-grant-select-permission-for-user1selectinsertdelete-for-user2-and-all-for-user3">5. Grant select permission for user1,select,insert,delete for user2 and all for user3.</h2>
+<ul>
+<li>Granting selection permission to user1:</li>
+</ul>
+<pre class="hljs"><code><div>GRANT SELECT ON public.users TO user1;
+</div></code></pre>
+<p><img src="19.png" alt=""></p>
+<ul>
+<li>To grant select, insert, and delete permissions to user2:</li>
+</ul>
+<pre class="hljs"><code><div>GRANT SELECT, INSERT, DELETE ON public.users TO user2;
+</div></code></pre>
+<p><img src="20.png" alt=""></p>
+<ul>
+<li>Give all permissions to user3</li>
+</ul>
+<pre class="hljs"><code><div>GRANT ALL PRIVILEGES ON public.users TO user3;
+</div></code></pre>
+<p><img src="21.png" alt=""></p>
+<h3 id="6-understanding-the-table-structurefinding-database-size-table-size-etc">6. Understanding the table structure,finding database size, table size etc.</h3>
+<p><strong>INSERT INTO</strong></p>
+<pre class="hljs"><code><div>INSERT INTO users (first_name, last_name, email)
+VALUES
+    ('John', 'Doe', 'john.doe@example.com'),
+    ('Jane', 'Smith', 'jane.smith@example.com'),
+    ('Alice', 'Johnson', 'alice.johnson@example.com'),
+    ('Bob', 'Brown', 'bob.brown@example.com'),
+    ('Eva', 'Davis', 'eva.davis@example.com'),
+    ('Michael', 'Lee', 'michael.lee@example.com'),
+    ('Samantha', 'Taylor', 'samantha.taylor@example.com'),
+    ('William', 'Anderson', 'william.anderson@example.com'),
+    ('Olivia', 'Moore', 'olivia.moore@example.com'),
+    ('Daniel', 'Wilson', 'daniel.wilson@example.com');
+</div></code></pre>
+<p><img src="22.png" alt=""></p>
+<p><strong>(a) Table structure</strong></p>
+<pre class="hljs"><code><div>\d users
+</div></code></pre>
+<p><img src="23.png" alt=""></p>
+<p><strong>(b) finding database size</strong></p>
+<pre class="hljs"><code><div>SELECT pg_size_pretty(pg_database_size(current_database()));
+</div></code></pre>
+<p><img src="24.png" alt=""></p>
+<p><strong>(c) table size</strong></p>
+<pre class="hljs"><code><div>SELECT pg_size_pretty(pg_total_relation_size('users'));
+</div></code></pre>
+<p><img src="25.png" alt=""></p>
+
+</body>
+</html>
