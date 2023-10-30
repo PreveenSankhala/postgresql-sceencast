@@ -26,7 +26,7 @@
 
 - Podman is an open-source container management tool used to create, run, and manage containers on Linux systems.
 
--PostgreSQL is an open-source relational database management system (RDBMS).
+- PostgreSQL is an open-source relational database management system (RDBMS).
 Which is used for data storage and management.
 
 
@@ -47,13 +47,20 @@ podman run --name postgres-container -e POSTGRES_PASSWORD=mysecretpassword -d -p
 ```
 ![](3.png)
 
+- podman run: This is the command used to run containers with Podman, an alternative containerization tool to Docker.
 
-- Podman run: This command is used to create and run a container.
-- -d: This option is used to run the container in background mode, meaning the container will run and your terminal will remain available.
-- --name my-postgres: With this option you can identify your container with the name "my-postgres".
-- -e POSTGRES_PASSWORD=mysecretpassword: With this option you are setting the environment variable, whose name is "POSTGRES_PASSWORD" and value is "mysecretpassword". This password will be used to access PostgreSQL database.
-- -v /mydata:/var/lib/postgresql/data: With this option you are mounting a volume. /mydata will map the path of the host system to the path of /var/lib/postgresql/data container. This allows you to store your database data in the host system, so that it persists, and the data remains safe even after you delete the container.
-- 'postgres:14: This is the image name that you are using from the container. "postgres:14" represents the official Docker image of version 14 of PostgreSQL. This container will run with the PostgreSQL database server.
+- --name postgres-container: This option specifies a custom name ("postgres-container") for the container. You can refer to the container by this name.
+
+- -e POSTGRES_PASSWORD=mysecretpassword: This option sets an environment variable named "POSTGRES_PASSWORD" with the value "mysecretpassword." This is typically used to configure the password for the PostgreSQL database within the container.
+
+- -d: This option runs the container in detached mode, which means it runs in the background, and you get the terminal prompt back for further commands.
+
+- -p 5432:5432: This option maps port 5432 from the host to port 5432 inside the container. This allows you to access the PostgreSQL server running in the container through port 5432 on your host machine.
+
+- docker.io/library/postgres:latest: This is the image name. It specifies the Docker image you want to run. In this case, it's "postgres" from the "library" repository on Docker Hub, using the "latest" tag.
+
+
+
 
 ## Verify that the PostgreSQL container is running:
 
