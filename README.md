@@ -26,8 +26,8 @@
 
 - Podman is an open-source container management tool used to create, run, and manage containers on Linux systems.
 
-- PostgreSQL ek open-source relational database management system (RDBMS) 
-hai jo data storage aur management ke liye istemal hota hai.
+-PostgreSQL is an open-source relational database management system (RDBMS).
+Which is used for data storage and management.
 
 
 
@@ -48,25 +48,30 @@ podman run --name postgres-container -e POSTGRES_PASSWORD=mysecretpassword -d -p
 ![](3.png)
 
 
-- podman run: Ye command ek container ko create aur run karne ke liye use hoti hai.
-- -d: Ye option container ko background mode me run karne ke liye use hota hai, matlab container run hoga aur aapka terminal available rahega.
-- --name my-postgres: Is option se aap apne container ko "my-postgres" naam se identify kar sakte hain.
-- -e POSTGRES_PASSWORD=mysecretpassword: Is option se aap environment variable set kar rahe hain, jiska naam "POSTGRES_PASSWORD" hai aur value "mysecretpassword" hai. Ye password PostgreSQL database access ke liye use hoga.
-- -v /mydata:/var/lib/postgresql/data: Is option se aap ek volume mount kar rahe hain. /mydata host system ke path ko /var/lib/postgresql/data container ke path se map karega. Isse aap apne database data ko host system me store kar sakte hain, taki wo persist kare, aur aap container ko delete karne ke baad bhi data safe rahe.
-- 'postgres:14: Ye image name hai, jise aap container se use kar rahe hain. "postgres:14" PostgreSQL ke version 14 ke official Docker image ko represent karta hai. Isse container PostgreSQL database server ke sath run karega.
+- Podman run: This command is used to create and run a container.
+- -d: This option is used to run the container in background mode, meaning the container will run and your terminal will remain available.
+- --name my-postgres: With this option you can identify your container with the name "my-postgres".
+- -e POSTGRES_PASSWORD=mysecretpassword: With this option you are setting the environment variable, whose name is "POSTGRES_PASSWORD" and value is "mysecretpassword". This password will be used to access PostgreSQL database.
+- -v /mydata:/var/lib/postgresql/data: With this option you are mounting a volume. /mydata will map the path of the host system to the path of /var/lib/postgresql/data container. This allows you to store your database data in the host system, so that it persists, and the data remains safe even after you delete the container.
+- 'postgres:14: This is the image name that you are using from the container. "postgres:14" represents the official Docker image of version 14 of PostgreSQL. This container will run with the PostgreSQL database server.
 
 ## Verify that the PostgreSQL container is running:
+
 ```
 podman ps
 ```
+
 ![](4.png)
 
 
 ## 2.create users,databases,tables,extensions on the same.
+
 ```
 podman exec -it postgres-container psql -U postgres
 
 ```
+
+
 ![](5.png)
 
 ## (a) Create Users
@@ -107,17 +112,17 @@ CREATE DATABASE my_database;
 
 ![](9.png)
 
+
 - CREATE TABLE: This keyword tells the database to create a new table.
   
 - my_table: This is the name of the table that is being created.
 - ( id SERIAL NOT NULL PRIMARY KEY, name VARCHAR(255) NOT NULL ): This is the definition of the table, which includes the names and data types of the columns in the table.
+
 ### Here is a more detailed explanation of each part of the statement:
+
 - id SERIAL NOT NULL PRIMARY KEY: This column will store the unique identifier for each row in the table. The SERIAL data type means that the database will automatically generate a unique integer value for each new row that is inserted into the table. The NOT NULL constraint means that this column cannot be empty. The PRIMARY KEY constraint means that this column uniquely identifies each row in the table.
 
 - name VARCHAR(255) NOT NULL: This column will store the name of each row in the table. The VARCHAR(255) data type means that this column can store up to 255 characters of text. The NOT NULL constraint means that this column cannot be empty.
-
-
-
 
 
 ## (d)  extensions
@@ -127,12 +132,11 @@ CREATE EXTENSION pg_trgm;
 
 ![](10.png)
 
-  **EXTENSION**  Ye SQL statement PostgreSQL database mein ek extension ko create karne ya activate karne ke liye istemal hota hai. Extension ek prakar ke additional modules ya functions hote hain jo PostgreSQL database functionality ko extend karte hain.
+**EXTENSION** This SQL statement is used to create or activate an extension in the PostgreSQL database. Extensions are additional modules or functions that extend PostgreSQL database functionality.
 
-**pg_trgm**  Ye extension PostgreSQL mein full-text search aur trigram similarity capabilities provide karta hai.
-Full-text search ka use karke, aap apne data mein text ko search kar sakte hain. Trigram similarity ka use karke, aap apne data mein text ke similarity ko calculate kar sakte hain.
-In capabilities ka use karne ke kai liye hai. For example, aap ine capabilities ka use karke ek website mein contents ko search kar sakte hain, ek database mein data ko search kar sakte hain, ya ek document collection mein documents ko search kar sakte hain.
-
+**pg_trgm** This extension provides full-text search and trigram similarity capabilities in PostgreSQL.
+Using full-text search, you can search for text in your data. Using Trigram similarity, you can calculate the similarity of text in your data.
+What are the reasons for using these capabilities? For example, you can use these capabilities to search for contents in a website, to search for data in a database, or to search for documents in a document collection.
 
 
 ### 3.Perform crud operations.
