@@ -35,7 +35,7 @@ Which is used for data storage and management.
 ```
 sudo apt-get update
 ```
-![](27.png
+![](27.png)
 
 - sudo: "Sudo" stands for "Superuser Do." It is used in Linux to execute a command as the root (admin) user, allowing the command to run with root privileges.
 
