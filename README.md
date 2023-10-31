@@ -30,7 +30,7 @@
 Which is used for data storage and management.
 
 
-## 1. system update
+## system update
 
 ```
 sudo apt-get update
