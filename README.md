@@ -30,6 +30,13 @@
 Which is used for data storage and management.
 
 
+## 1. system update
+
+```
+sudo apt-get update
+```
+
+
 
 ## 1. Create a postgres container with podman
 ```
