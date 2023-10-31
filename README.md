@@ -35,6 +35,13 @@ Which is used for data storage and management.
 ```
 sudo apt-get update
 ```
+![](27.png
+
+- sudo: "Sudo" stands for "Superuser Do." It is used in Linux to execute a command as the root (admin) user, allowing the command to run with root privileges.
+
+- apt-get: This is a command used for package management on Linux. It helps in acquiring, installing, removing, and updating packages in the package management system.
+
+- update: The "update" in this command is used to refresh the package management database with information about new packages. It provides the user with information about new packages and their versions, allowing them to be installed on the system.
 
 
 
