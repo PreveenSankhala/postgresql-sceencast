@@ -70,13 +70,16 @@ podman ps
 
 ![](4.png)
 
-
-## 2.create users,databases,tables,extensions on the same.
+## connect data base
 
 ```
 podman exec -it postgres-container psql -U postgres
 
 ```
+
+
+## 2.create users,databases,tables,extensions on the same.
+
 
 
 ![](5.png)
