@@ -91,6 +91,16 @@ podman exec -it postgres-container psql -U postgres
 
 ```
 
+- podman: This is the command-line tool for managing containers, similar to Docker.
+
+- exec: This subcommand is used to execute a command within a running container.
+
+- -it: These are options commonly used in container management to interact with the container's terminal (interactive mode).
+
+- postgres-container: This is the name or ID of the container in which you want to execute the command.
+
+- psql -U postgres: This is the command you want to execute inside the container. It's running the PostgreSQL command-line tool (psql) and connecting to the PostgreSQL database using the postgres user.
+
 
 ## 2.create users,databases,tables,extensions on the same.
 
@@ -118,6 +128,8 @@ CREATE DATABASE my_database;
 
 
 ## (c) Tables
+
+- connect database
 
 ```
 \c my_database;
