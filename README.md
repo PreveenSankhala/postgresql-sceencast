@@ -15,7 +15,7 @@
 
 ## 1. Task requirement: 
 -  Create a postgres container using podman
--  Create users,databases,tables,extensions on the same.
+-  Create users,databases,tables and extensions on the same.
 -  Perform crud operations.
 -  Create three users with a password.
 -  Grant select permission for user1,select,insert,delete for user2 and all for user3.
@@ -125,7 +125,7 @@ podman exec -it postgres-container psql -U postgres
 - **psql -U postgres:** This is the command you want to execute inside the container. It's running the PostgreSQL command-line tool (psql) and connecting to the PostgreSQL database using the postgres user.
 
 
-## 2.Create users,databases,tables,extensions on the same.
+## 2.Create users,databases,tables and extensions on the same.
 
 
 
