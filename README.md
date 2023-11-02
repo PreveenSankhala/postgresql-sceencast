@@ -84,7 +84,7 @@ podman ps
 
 ![](4.png)
 
-## connect data base
+## connect Postgres container
 
 ```
 podman exec -it postgres-container psql -U postgres
