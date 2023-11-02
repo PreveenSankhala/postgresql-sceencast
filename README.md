@@ -93,7 +93,7 @@ podman ps
 
 ![](4.png)
 
-## connect Postgres container
+## Connect Postgres container
 
 
 ```
@@ -114,7 +114,7 @@ podman exec -it postgres-container psql -U postgres
 - **psql -U postgres:** This is the command you want to execute inside the container. It's running the PostgreSQL command-line tool (psql) and connecting to the PostgreSQL database using the postgres user.
 
 
-## 2.create users,databases,tables,extensions on the same.
+## 2.Create users,databases,tables,extensions on the same.
 
 
 
@@ -319,7 +319,7 @@ VALUES
 
 
 
-**(b) finding database size**
+**(b) Finding database size**
 ```
 SELECT pg_size_pretty(pg_database_size(current_database()));
 ```
@@ -327,7 +327,7 @@ SELECT pg_size_pretty(pg_database_size(current_database()));
 
 
 
-**(c) table size**
+**(c) Table size**
 ```
 SELECT pg_size_pretty(pg_total_relation_size('users'));
 ```
