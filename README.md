@@ -10,7 +10,10 @@
 **4. Definition of tools**
 
 
-## 1. Task requirement: Podman.Postgres
+## 1. Task requirement: 
+
+- Podman
+- Postgres
 
 ## 2. Environment details: 
 - Os:- Ubuntu 22.04.3 LTS
