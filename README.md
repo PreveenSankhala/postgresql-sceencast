@@ -14,12 +14,12 @@
 
 
 ## 1. Task requirement: 
-- 1. Create a postgres container using podman
-- 2. Create users,databases,tables,extensions on the same.
-- 3. Perform crud operations.
-- 4. Create three users with a password.
-- 5. Grant select permission for user1,select,insert,delete for user2 and all for user3.
-- 6. Understanding the table structure,finding database size, table size etc.
+-  Create a postgres container using podman
+-  Create users,databases,tables,extensions on the same.
+-  Perform crud operations.
+-  Create three users with a password.
+-  Grant select permission for user1,select,insert,delete for user2 and all for user3.
+-  Understanding the table structure,finding database size, table size etc.
 
 ## 2. Tool And technology:
 
