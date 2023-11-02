@@ -98,6 +98,8 @@ podman exec -it postgres-container psql -U postgres
 
 ```
 
+![](5.png)
+
 - podman: This is the command-line tool for managing containers, similar to Docker.
 
 - exec: This subcommand is used to execute a command within a running container.
