@@ -125,7 +125,7 @@ podman exec -it postgres-container psql -U postgres
 - **psql -U postgres:** This is the command you want to execute inside the container. It's running the PostgreSQL command-line tool (psql) and connecting to the PostgreSQL database using the postgres user.
 
 
-## 2.Create users,databases,tables and extensions on the same.
+## 2.Create users,databases,tables and Extensions on the same.
 
 
 
@@ -180,7 +180,7 @@ CREATE DATABASE my_database;
 - **name VARCHAR(255) NOT NULL:** This column will store the name of each row in the table. The VARCHAR(255) data type means that this column can store up to 255 characters of text. The NOT NULL constraint means that this column cannot be empty.
 
 
-## (d)  extensions
+## (d)  Extensions
 ```
 CREATE EXTENSION pg_trgm;
 ```
