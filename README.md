@@ -115,7 +115,6 @@ podman exec -it postgres-container psql -U postgres
 
 
 
-![](5.png)
 
 ## (a) Create Users
 ```
