@@ -35,7 +35,9 @@ Which is used for data storage and management.
 ```
 sudo apt-get update
 ```
+
 ![](27.png)
+
 
 - sudo: "Sudo" stands for "Superuser Do." It is used in Linux to execute a command as the root (admin) user, allowing the command to run with root privileges.
 
@@ -46,10 +48,14 @@ sudo apt-get update
 
 
 ## 1. Create a postgres container with podman
+
 ```
 sudo apt install -y podman
+
 ```
+
 ![](1.png)
+
 ```
 podman version
 ```
@@ -85,6 +91,7 @@ podman ps
 ![](4.png)
 
 ## connect Postgres container
+
 
 ```
 podman exec -it postgres-container psql -U postgres
