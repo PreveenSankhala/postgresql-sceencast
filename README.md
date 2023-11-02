@@ -16,9 +16,9 @@
 - Postgres
 
 ## 2. Environment details: 
-- Os:- Ubuntu 22.04.3 LTS
+- Os- Ubuntu 22.04.3 LTS
 - Podman- 3.4.4
-- Psql (PostgreSQL) 14.9
+- Psql- (PostgreSQL) 14.9
 
 ## 3. System configuration:
 - CPU - 4
@@ -27,13 +27,13 @@
 
 ## 4. Definition of tools:
 
-- Podman is an open-source container management tool used to create, run, and manage containers on Linux systems.
+- **Podman** is an open-source container management tool used to create, run, and manage containers on Linux systems.
 
-- PostgreSQL is an open-source relational database management system (RDBMS).
+- **PostgreSQL** is an open-source relational database management system (RDBMS).
 Which is used for data storage and management.
 
 
-## system update
+## System update
 
 ```
 sudo apt-get update
@@ -42,15 +42,15 @@ sudo apt-get update
 ![](27.png)
 
 
-- sudo: "Sudo" stands for "Superuser Do." It is used in Linux to execute a command as the root (admin) user, allowing the command to run with root privileges.
+- **sudo:** "Sudo" stands for "Superuser Do." It is used in Linux to execute a command as the root (admin) user, allowing the command to run with root privileges.
 
-- apt-get: This is a command used for package management on Linux. It helps in acquiring, installing, removing, and updating packages in the package management system.
+- **apt-get:** This is a command used for package management on Linux. It helps in acquiring, installing, removing, and updating packages in the package management system.
 
-- update: The "update" in this command is used to refresh the package management database with information about new packages. It provides the user with information about new packages and their versions, allowing them to be installed on the system.
+- **update:** The "update" in this command is used to refresh the package management database with information about new packages. It provides the user with information about new packages and their versions, allowing them to be installed on the system.
 
 
 
-## 1. Create a postgres container with podman
+## 1. Create a postgres container using podman
 
 ```
 sudo apt install -y podman
@@ -70,17 +70,17 @@ podman run --name postgres-container -e POSTGRES_PASSWORD=mysecretpassword -d -p
 ```
 ![](3.png)
 
-- podman run: This is the command used to run containers with Podman, an alternative containerization tool to Docker.
+- **podman run:** This is the command used to run containers with Podman, an alternative containerization tool to Docker.
 
-- --name postgres-container: This option specifies a custom name ("postgres-container") for the container. You can refer to the container by this name.
+- **--name postgres-container:** This option specifies a custom name ("postgres-container") for the container. You can refer to the container by this name.
 
-- -e POSTGRES_PASSWORD=mysecretpassword: This option sets an environment variable named "POSTGRES_PASSWORD" with the value "mysecretpassword." This is typically used to configure the password for the PostgreSQL database within the container.
+- **-e POSTGRES_PASSWORD=mysecretpassword:** This option sets an environment variable named "POSTGRES_PASSWORD" with the value "mysecretpassword." This is typically used to configure the password for the PostgreSQL database within the container.
 
-- -d: This option runs the container in detached mode, which means it runs in the background, and you get the terminal prompt back for further commands.
+- **-d:** This option runs the container in detached mode, which means it runs in the background, and you get the terminal prompt back for further commands.
 
-- -p 5432:5432: This option maps port 5432 from the host to port 5432 inside the container. This allows you to access the PostgreSQL server running in the container through port 5432 on your host machine.
+- **-p 5432:5432:** This option maps port 5432 from the host to port 5432 inside the container. This allows you to access the PostgreSQL server running in the container through port 5432 on your host machine.
 
-- docker.io/library/postgres:latest: This is the image name. It specifies the Docker image you want to run. In this case, it's "postgres" from the "library" repository on Docker Hub, using the "latest" tag.
+- **docker.io/library/postgres:latest:** This is the image name. It specifies the Docker image you want to run. In this case, it's "postgres" from the "library" repository on Docker Hub, using the "latest" tag.
 
 
 
@@ -103,15 +103,15 @@ podman exec -it postgres-container psql -U postgres
 
 ![](5.png)
 
-- podman: This is the command-line tool for managing containers, similar to Docker.
+- **podman:** This is the command-line tool for managing containers, similar to Docker.
 
-- exec: This subcommand is used to execute a command within a running container.
+- **exec:** This subcommand is used to execute a command within a running container.
 
-- -it: These are options commonly used in container management to interact with the container's terminal (interactive mode).
+- **-it:** These are options commonly used in container management to interact with the container's terminal (interactive mode).
 
-- postgres-container: This is the name or ID of the container in which you want to execute the command.
+- **postgres-container:** This is the name or ID of the container in which you want to execute the command.
 
-- psql -U postgres: This is the command you want to execute inside the container. It's running the PostgreSQL command-line tool (psql) and connecting to the PostgreSQL database using the postgres user.
+- **psql -U postgres:** This is the command you want to execute inside the container. It's running the PostgreSQL command-line tool (psql) and connecting to the PostgreSQL database using the postgres user.
 
 
 ## 2.create users,databases,tables,extensions on the same.
@@ -160,16 +160,13 @@ CREATE DATABASE my_database;
 ![](9.png)
 
 
-- CREATE TABLE: This keyword tells the database to create a new table.
+- **CREATE TABLE:** This keyword tells the database to create a new table.
   
-- my_table: This is the name of the table that is being created.
-- ( id SERIAL NOT NULL PRIMARY KEY, name VARCHAR(255) NOT NULL ): This is the definition of the table, which includes the names and data types of the columns in the table.
+- **my_table:** This is the name of the table that is being created.
 
-### Here is a more detailed explanation of each part of the statement:
+- **id SERIAL NOT NULL PRIMARY KEY:** This column will store the unique identifier for each row in the table. The SERIAL data type means that the database will automatically generate a unique integer value for each new row that is inserted into the table. The NOT NULL constraint means that this column cannot be empty. The PRIMARY KEY constraint means that this column uniquely identifies each row in the table.
 
-- id SERIAL NOT NULL PRIMARY KEY: This column will store the unique identifier for each row in the table. The SERIAL data type means that the database will automatically generate a unique integer value for each new row that is inserted into the table. The NOT NULL constraint means that this column cannot be empty. The PRIMARY KEY constraint means that this column uniquely identifies each row in the table.
-
-- name VARCHAR(255) NOT NULL: This column will store the name of each row in the table. The VARCHAR(255) data type means that this column can store up to 255 characters of text. The NOT NULL constraint means that this column cannot be empty.
+- **name VARCHAR(255) NOT NULL:** This column will store the name of each row in the table. The VARCHAR(255) data type means that this column can store up to 255 characters of text. The NOT NULL constraint means that this column cannot be empty.
 
 
 ## (d)  extensions
@@ -199,12 +196,12 @@ INSERT INTO users (first_name, last_name, email) VALUES ('John', 'Doe', 'john.do
 ![](11.png)
 
 
-- id: A serial column that is the primary key of the table. This means that each row in the table will have a unique id value.
-- name: A VARCHAR column that stores the name of the hospital.
-- address: A VARCHAR column that stores the address of the hospital.
-- phone: A VARCHAR column that stores the phone number of the hospital.
-- NOT NULL: constraint on all of the columns means that each column must have a value. No rows will be inserted into the table if any of the columns are empty.
-- VARCHAR : is a variable-length string data type in SQL. It means that it can store strings of any length, up to the maximum length specified when the column is created. It is a good choice for storing strings of variable length, such as names, addresses, and phone numbers.
+- **id:** A serial column that is the primary key of the table. This means that each row in the table will have a unique id value.
+- **name:** A VARCHAR column that stores the name of the hospital.
+- **address:** A VARCHAR column that stores the address of the hospital.
+- **phone:** A VARCHAR column that stores the phone number of the hospital.
+- **NOT NULL:** constraint on all of the columns means that each column must have a value. No rows will be inserted into the table if any of the columns are empty.
+- **VARCHAR:** is a variable-length string data type in SQL. It means that it can store strings of any length, up to the maximum length specified when the column is created. It is a good choice for storing strings of variable length, such as names, addresses, and phone numbers.
 
 
 
