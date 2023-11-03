@@ -74,6 +74,7 @@ sudo apt install -y podman
 ```
 podman version
 ```
+
 ![](2.png)
 
 ```
