@@ -21,6 +21,7 @@
 -  Grant select permission for user1,select,insert,delete for user2 and all for user3.
 -  Understanding the table structure,finding database size, table size etc.
 
+
 ## 2. Tool And technology:
 
 - Podman
