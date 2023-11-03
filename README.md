@@ -27,14 +27,17 @@
 - Podman
 - Postgres
 
+
 ## 2. Environment details: 
 - Os- Ubuntu 22.04.3 LTS
 - Podman- 3.4.4
 - Psql- (PostgreSQL) 14.9
 
+
 ## 3. System configuration:
 - CPU - 4
 - Storage -16 GB
+
 
 
 ## 4. Definition of tools:
@@ -62,6 +65,7 @@ sudo apt-get update
 
 
 
+
 ## 1. Create a postgres container using podman
 
 ```
@@ -69,7 +73,9 @@ sudo apt install -y podman
 
 ```
 
+
 ![](1.png)
+
 
 ```
 podman version
@@ -77,10 +83,12 @@ podman version
 
 ![](2.png)
 
+
 ```
 podman run --name postgres-container -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 docker.io/library/postgres:latest
 
 ```
+
 ![](3.png)
 
 - **podman run:** This is the command used to run containers with Podman, an alternative containerization tool to Docker.
