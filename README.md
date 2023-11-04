@@ -1,4 +1,4 @@
-<center> <u> <h1 style="font-size: 50px;"> POSTGRESQL setup</h1> </u> </center>
+<center> <u> <h1 style="font-size: 50px;"> POSTGRESQL SETUP</h1> </u> </center>
 
 
 ## Table of contents
