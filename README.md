@@ -1,4 +1,4 @@
-<center> <u> <h1 style="font-size: 50px;"> Postgres setup</h1> </u> </center>
+<center> <u> <h1 style="font-size: 50px;"> Postgresql setup</h1> </u> </center>
 
 
 ## Table of contents
@@ -15,7 +15,7 @@
 
 
 ## 1. Task requirement: 
--  Create a postgres container using podman
+-  Create a postgresql container using podman
 -  Create users,databases,tables and extensions on the same.
 -  Perform crud operations.
 -  Create three users with a password.
