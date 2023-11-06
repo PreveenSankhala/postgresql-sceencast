@@ -58,6 +58,7 @@ sudo apt-get update
 ![](27.png)
 
 
+
 - **sudo:** "Sudo" stands for "Superuser Do." It is used in Linux to execute a command as the root (admin) user, allowing the command to run with root privileges.
 
 - **apt-get:** This is a command used for package management on Linux. It helps in acquiring, installing, removing, and updating packages in the package management system.
@@ -73,6 +74,7 @@ sudo apt-get update
 sudo apt install -y podman
 
 ```
+
 
 
 ![](1.png)
