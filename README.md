@@ -152,11 +152,13 @@ CREATE USER gurugram WITH PASSWORD 'gurugram1';
 ![](6.png)
 
 
+
 ## (b) Databases
 ```
 CREATE DATABASE my_database;
 
 ```
+
 
 ![](7.png)
 
@@ -169,6 +171,7 @@ CREATE DATABASE my_database;
 ```
 \c my_database;
 ```
+
 
 ```
      CREATE TABLE users (
