@@ -242,6 +242,8 @@ SELECT * FROM users;
 ![](12.png)
 
 
+
+
 ## (C ) Update
 
 
@@ -251,6 +253,8 @@ UPDATE users SET email = 'new.email@example.com' WHERE id = 1;
 ```
 
 ![](13.png)
+
+
 
 ## (D) Delete
 ```
