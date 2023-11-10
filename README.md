@@ -1,6 +1,7 @@
 <center> <u> <h1 style="font-size: 50px;"> POSTGRESQL SETUP</h1> </u> </center>
 
 
+
 ## Table of contents
 
 **1. Task requirement**
@@ -14,6 +15,7 @@
 **5. Definition of tools**
 
 
+
 ## 1. Task requirement: 
 -  Create a postgresql container using podman
 -  Create users,databases,tables and extensions on the same.
@@ -21,6 +23,7 @@
 -  Create three users with a password.
 -  Grant select permission for user1,select,insert,delete for user2 and all for user3.
 -  Understanding the table structure,finding database size, table size etc.
+
 
 
 ## 2. Tool And technology:
