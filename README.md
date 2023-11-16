@@ -191,6 +191,7 @@ CREATE DATABASE my_database;
 
 ```
 
+
 ![](9.png)
 
 
@@ -203,10 +204,14 @@ CREATE DATABASE my_database;
 - **name VARCHAR(255) NOT NULL:** This column will store the name of each row in the table. The VARCHAR(255) data type means that this column can store up to 255 characters of text. The NOT NULL constraint means that this column cannot be empty.
 
 
+
+
 ## (d)  Extensions
 ```
 CREATE EXTENSION pg_trgm;
 ```
+
+
 
 ![](10.png)
 
@@ -215,6 +220,8 @@ CREATE EXTENSION pg_trgm;
 **pg_trgm** This extension provides full-text search and trigram similarity capabilities in PostgreSQL.
 Using full-text search, you can search for text in your data. Using Trigram similarity, you can calculate the similarity of text in your data.
 What are the reasons for using these capabilities? For example, you can use these capabilities to search for contents in a website, to search for data in a database, or to search for documents in a document collection.
+
+
 
 
 ### 3.Perform crud operations.
