@@ -146,6 +146,8 @@ podman exec -it postgres-container psql -U postgres
 - **psql -U postgres:** This is the command you want to execute inside the container. It's running the PostgreSQL command-line tool (psql) and connecting to the PostgreSQL database using the postgres user.
 
 
+
+
 ## 2.Create users,databases,tables and Extensions on the same.
 
 
@@ -157,6 +159,8 @@ CREATE USER noida WITH PASSWORD 'noida1';
 CREATE USER delhi WITH PASSWORD 'delhi1';
 CREATE USER gurugram WITH PASSWORD 'gurugram1';
 ```
+
+
 ![](6.png)
 
 
