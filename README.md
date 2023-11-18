@@ -117,11 +117,17 @@ podman run --name postgres-container -e POSTGRES_PASSWORD=mysecretpassword -d -p
 
 
 
+
+
+
 ## Verify that the PostgreSQL container is running:
 
 ```
 podman ps
 ```
+
+
+
 
 ![](4.png)
 
@@ -132,6 +138,9 @@ podman ps
 podman exec -it postgres-container psql -U postgres
 
 ```
+
+
+
 
 ![](5.png)
 
