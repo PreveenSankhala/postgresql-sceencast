@@ -28,7 +28,7 @@
 
 
 
-## 2. Tool required:
+## 2. Tools required:
 
 - Podman
 - Postgres
