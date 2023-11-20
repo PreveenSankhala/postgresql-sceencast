@@ -6,9 +6,9 @@
 
 
 
-**1. Tools required**
+**1. Task requirement**
 
-**2. Tool And technology**
+**2. Tool required**
 
 **3. Environment details**
 
