@@ -28,7 +28,7 @@
 
 
 
-## 2. Tool and Technology:
+## 2. Tool required:
 
 - Podman
 - Postgres
