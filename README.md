@@ -8,7 +8,7 @@
 
 **1. Task requirement**
 
-**2. Tool required**
+**2. Tools required**
 
 **3. Environment details**
 
