@@ -28,7 +28,7 @@
 
 
 
-## 2. Tool And technology:
+## 2. Tool and Technology:
 
 - Podman
 - Postgres
