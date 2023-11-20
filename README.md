@@ -51,8 +51,8 @@
 
 - **Podman** is an open-source container management tool used to create, run, and manage containers on Linux systems.
 
-- **PostgreSQL** is an open-source relational database management system (RDBMS).
-Which is used for data storage and management.
+- **PostgreSQL** is an open-source relational database management system (RDBMS)
+which is used for data storage and management.
 
 
 ## System update
