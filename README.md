@@ -60,9 +60,23 @@ which is used for data storage and management.
 ```
 sudo apt-get update
 ```
-
-![](27.png)
-
+```
+https://brave-browser-apt-release.s3.brave.com stable InRelease
+Hit:1 Hit:2 http://in.archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB] Get:5 http://security.ubuntu.com/ubuntu jammy-security/main amd64 DEP-11 Metadata [43.0 KB]
+Get:6 http://in.archive.ubuntu.com/ubuntu jammy-backports InRelease [109 kB]
+Get:7 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 DEP-11 Metadata [55.1 kB]
+Get:8
+http://in.archive.ubuntu.com/ubuntu jammy-updates/main i386 Packages [523 kB]
+Get:9 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1,148 kB]
+Get:10 Get:11 http://in.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [245 kB] http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 DEP-11 Metadata [101 kB]
+Get:12 http://in.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [1,103 kB]
+Get:13 http://in.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [179 kB]
+Get:14 Get:15 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 DEP-11 Metadata [305 kB] http://in.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 DEP-11 Metadata [940 B]
+Get:16 http://in.archive.ubuntu.com/ubuntu jammy-backports/main amd64 DEP-11 Metadata [4,940 B]
+Get:17 http://in.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 DEP-11 Metadata [18.8 kB]
+Fetched 4,064 kB in 15s (268 kB/s) Reading package lists... Done
 
 
 
@@ -73,7 +87,7 @@ sudo apt-get update
 - **apt-get:** This is a command used for package management on Linux. It helps in acquiring, installing, removing, and updating packages in the package management system.
 
 - **update:** The "update" in this command is used to refresh the package management database with information about new packages. It provides the user with information about new packages and their versions, allowing them to be installed on the system.
-
+```
 
 
 
@@ -83,26 +97,54 @@ sudo apt-get update
 sudo apt install -y podman
 
 ```
-
-
-
-
-![](1.png)
-
+```
+Reading package lists... Done
+Building dependency tree... Done Reading state information... Done
+Suggested packages:
+containers-storage docker-compose
+The following NEW packages will be installed:
+podman
+0 upgraded, 1 newly installed, o to remove and 2 not upgraded.
+Need to get 10.6 MB of archives.
+After this operation, 36.5 MB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 podman amd64 3.4.4+ds1-1ubuntu1.22.04.2 [10.6 MB]
+Fetched 10.6 MB in 4s (2,722 kB/s)
+Selecting previously unselected package podman.
+(Reading database... 198982 files and directories currently installed.) Preparing to unpack.../podman_3.4.4+ds1-1ubuntu1.22.04.2_amd64.deb
+Unpacking podman (3.4.4+ds1-1ubuntu1.22.04.2).."
+Setting up podman (3.4.4+ds1-1ubuntu1.22.04.2)
+Created symlink /etc/systemd/user/default.target.wants/podman.service Created symlink /etc/systemd/user/sockets.target.wants/podman.socket /usr/lib/systemd/user/podman.service.
+/usr/lib/systemd/user/podman.socket. Created symlink /etc/systemd/system/default.target.wants/podman.service/lib/systemd/system/podman.service.
+Created symlink /etc/systemd/system/sockets.target.wants/podman.socket/lib/systemd/system/podman.socket.
+Created symlink /etc/systemd/system/default.target.wants/podman-auto-update.service/lib/systemd/system/podman-auto-update.service.
+Created symlink /etc/systemd/system/timers.target.wants/podman-auto-update.timer/lib/systemd/system/podman-auto-update.timer. Created symlink /etc/systemd/system/default.target.wants/podman-restart.service/lib/systemd/system/podman-restart.service.
+Processing triggers for man-db (2.10.2-1)...
+prince@123:-$
+````
 
 ```
 podman version
 ```
-
-![](2.png)
+```
+Version: 3.4.4
+API Version: 3.4.4
+Go Version:
+go1.18.1
+Built:
+Thu Jan 1 05:30:00 1970
+OS/Arch:
+linux/amd64
+```
 
 
 ```
 podman run --name postgres-container -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 docker.io/library/postgres:latest
 
 ```
-
-![](3.png)
+```
+prince@123:-$ podman run-name postgres-container -e POSTGRES_PASSWORD=mysecretpassword dp 5432:5432 docker.to/library/postgres: latest 413a4432f26d5fb9f7358c447c17502b66054a0e1aa35a09fd67d628731502e2
+prince@123:-$
+```
 
 - **podman run:** This is the command used to run containers with Podman, an alternative containerization tool to Docker.
 
@@ -127,11 +169,24 @@ podman run --name postgres-container -e POSTGRES_PASSWORD=mysecretpassword -d -p
 ```
 podman ps
 ```
-
-
-
-
-![](4.png)
+```
+prince@123:-$ podman ps
+CONTAINER ID IMAGE
+COMMAND
+CREATED
+STATUS
+PORTS
+docker.to/library/postgres:
+postgres
+15 seconds ago
+Up 15 seconds ago
+NAMES
+413a4432f26d
+prince@123:-$
+latest
+0.0.0.0:5432->5432/tcp
+postgres-container
+```
 
 ## Connect Postgres container
 
