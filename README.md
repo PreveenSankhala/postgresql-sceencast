@@ -195,11 +195,11 @@ postgres-container
 podman exec -it postgres-container psql -U postgres
 
 ```
-
-
-
-
-![](5.png)
+```
+prince@123:-$ podman execit postgres-container psql -U postgres psql (16.0 (Debian 16.0-1.pgdg120+1))
+Type "help" for help.
+postgres=#
+```
 
 - **podman:** This is the command-line tool for managing containers, similar to Docker.
 
@@ -225,10 +225,14 @@ CREATE USER noida WITH PASSWORD 'noida1';
 CREATE USER delhi WITH PASSWORD 'delhi1';
 CREATE USER gurugram WITH PASSWORD 'gurugram1';
 ```
-
-
-![](6.png)
-
+```
+postgres # CREATE USER noida WITH PASSWORD 'noidal';
+CREATE USER delht WITH PASSWORD delhii'; CREATE USER gurugram WITH PASSWORD 'gurugram1';
+CREATE ROLE
+CREATE ROLE
+CREATE ROLE
+postgres=#
+```
 
 
 ## (b) Databases
@@ -236,10 +240,11 @@ CREATE USER gurugram WITH PASSWORD 'gurugram1';
 CREATE DATABASE my_database;
 
 ```
-
-
-![](7.png)
-
+```
+postgres=# CREATE DATABASE my_database;
+CREATE DATABASE
+postgres=#
+```
 
 
 ## (c) Tables
