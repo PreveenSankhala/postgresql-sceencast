@@ -31,7 +31,7 @@
 ## 2. Tools use:
 
 - Podman
-- Postgres
+- Postgresql
 
 
 ## 2. Environment details (minimum): 
