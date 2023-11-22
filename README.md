@@ -60,8 +60,8 @@ which is used for data storage and management.
 ```
 sudo apt-get update
 ```
-```
-https://brave-browser-apt-release.s3.brave.com stable InRelease
+
+- https://brave-browser-apt-release.s3.brave.com stable InRelease
 Hit:1 Hit:2 http://in.archive.ubuntu.com/ubuntu jammy InRelease
 Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
 Get:4 http://in.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB] Get:5 http://security.ubuntu.com/ubuntu jammy-security/main amd64 DEP-11 Metadata [43.0 KB]
@@ -97,8 +97,8 @@ Fetched 4,064 kB in 15s (268 kB/s) Reading package lists... Done
 sudo apt install -y podman
 
 ```
-```
-Reading package lists... Done
+
+- Reading package lists... Done
 Building dependency tree... Done Reading state information... Done
 Suggested packages:
 containers-storage docker-compose
@@ -120,13 +120,13 @@ Created symlink /etc/systemd/system/default.target.wants/podman-auto-update.serv
 Created symlink /etc/systemd/system/timers.target.wants/podman-auto-update.timer/lib/systemd/system/podman-auto-update.timer. Created symlink /etc/systemd/system/default.target.wants/podman-restart.service/lib/systemd/system/podman-restart.service.
 Processing triggers for man-db (2.10.2-1)...
 prince@123:-$
-````
+
 
 ```
 podman version
 ```
-```
-Version: 3.4.4
+
+- Version: 3.4.4
 API Version: 3.4.4
 Go Version:
 go1.18.1
@@ -134,7 +134,7 @@ Built:
 Thu Jan 1 05:30:00 1970
 OS/Arch:
 linux/amd64
-```
+
 
 
 ```
