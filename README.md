@@ -87,7 +87,7 @@ Fetched 4,064 kB in 15s (268 kB/s) Reading package lists... Done
 - **apt-get:** This is a command used for package management on Linux. It helps in acquiring, installing, removing, and updating packages in the package management system.
 
 - **update:** The "update" in this command is used to refresh the package management database with information about new packages. It provides the user with information about new packages and their versions, allowing them to be installed on the system.
-```
+
 
 
 
