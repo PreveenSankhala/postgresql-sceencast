@@ -41,7 +41,7 @@
 - Psql- (PostgreSQL) 14.9
 
 
-## Minimum System Requirements for PostgreSQL:
+## 3 Minimum System Requirements for PostgreSQL:
 
 - **CPU:** Dual-core processor
   
