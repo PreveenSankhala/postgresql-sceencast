@@ -35,18 +35,25 @@
 
 
 ## 2. Environment details (minimum): 
+
 - OS- Ubuntu 22.04.3 LTS (Download Link Here ) (https://ubuntu.com/download/desktop) 
 - Podman- 3.4.4 
 - Psql- (PostgreSQL) 14.9
 
 
-## 3. System Configuration (Minimum):
+## Minimum System Requirements for PostgreSQL:
 
-- **CPU:** Quad-core processor
-  - Details: Intel Core i5 (4th Gen)
+- **CPU:** Dual-core processor
+  
 
-- **Storage:** 16 GB
-  - Details: 16 GB DDR4 RAM
+- **RAM:** 2 GB
+
+- **Storage:** 20 GB
+
+
+
+
+Please note that these are minimal requirements, and for production or more demanding environments, you might need higher specifications. Additionally, PostgreSQL's performance can be influenced by factors like indexing, query complexity, and concurrent connections. Always refer to the [official documentation](https://www.postgresql.org/docs/) and consider your specific use case when determining system requirements.
 
 
 
@@ -68,6 +75,7 @@ sudo apt-get update
 
 ## input
 
+```
 - https://brave-browser-apt-release.s3.brave.com stable InRelease
 Hit:1 Hit:2 http://in.archive.ubuntu.com/ubuntu jammy InRelease
 Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
@@ -84,7 +92,7 @@ Get:14 Get:15 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 D
 Get:16 http://in.archive.ubuntu.com/ubuntu jammy-backports/main amd64 DEP-11 Metadata [4,940 B]
 Get:17 http://in.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 DEP-11 Metadata [18.8 kB]
 Fetched 4,064 kB in 15s (268 kB/s) Reading package lists... Done
-
+```
 
 
 
