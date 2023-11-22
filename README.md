@@ -393,7 +393,7 @@ my_database=#
 UPDATE users SET email = 'new.email@example.com' WHERE id = 1;
 
 ```
-## update
+## output
 
 ```
 UPDATE 1
@@ -407,7 +407,7 @@ DELETE FROM users WHERE id = 1;
 
 ```
 
-## update
+## output
 
 ```
 DELETE 1
