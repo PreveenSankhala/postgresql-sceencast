@@ -482,23 +482,53 @@ my_database=#
 ```
 \d users
 ```
-
-![](23.png)
-
+```
+my database=# \
+d users
+Column
+id
+Table "
+public.users"
+| Collation |
+Nullable |
+Default
+integer
+not
+Type
+null | nextval('users_id_seq'::regclass)
+first_name
+character varying(50)
+last name character varying(50)
+character varying(100)|
+email
+Indexes:
+"users_pkey" PRIMARY KEY, btree (id)
+"users_email_key" UNIQUE CONSTRAINT, btree (email)
+my_database=#
+```
 
 
 **(b) Finding database size**
 ```
 SELECT pg_size_pretty(pg_database_size(current_database()));
 ```
-![](24.png)
-
+```
+pg_size_pretty
+7700 kB
+(1 row)
+my database=#
+```
 
 
 **(c) Table size**
 ```
 SELECT pg_size_pretty(pg_total_relation_size('users'));
 ```
-![](25.png)
 
+```
+pg_size_pretty
+40 kB
+(1 row)
+my_database=#
+```
 
