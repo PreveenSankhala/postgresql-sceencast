@@ -421,23 +421,31 @@ Superuser, Create role, Create DB, Replication, Bypass RLS
 ```
 GRANT SELECT ON public.users TO user1;
 ```
-
-![](19.png)
+```
+GRANT
+my_database=#
+```
 
 - To grant select, insert, and delete permissions to user2:
 
 ```
 GRANT SELECT, INSERT, DELETE ON public.users TO user2;
 ```
-![](20.png)
+
+```
+GRANT
+my_database=#
+```
 
 - Give all permissions to user3
 ```
 GRANT ALL PRIVILEGES ON public.users TO user3;
 ```
 
-![](21.png)
-
+```
+GRANT
+my_database=#
+```
 
 
 
@@ -463,7 +471,12 @@ VALUES
     ('Olivia', 'Moore', 'olivia.moore@example.com'),
     ('Daniel', 'Wilson', 'daniel.wilson@example.com');
 ```
-![](22.png)
+
+```
+INSERT 10
+my_database=#
+
+```
 
 **(a) Table structure**
 ```
