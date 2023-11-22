@@ -361,31 +361,55 @@ DELETE FROM users WHERE id = 1;
 
 ```
 
-![](14.png)
-
+```
+DELETE 1
+my_database=#
+```
 
 ## 4. Create three users with a password.
 ```
 CREATE ROLE user1 WITH LOGIN PASSWORD 'password1';
 ```
-![](15.png)
+```
+CREATE ROLE
+my_database=#
+```
 
 ```
 CREATE ROLE user2 WITH LOGIN PASSWORD 'password2';
 
 ```
-![](16.png)
+```
+CREATE ROLE
+my_database=#
+```
 
 ```
 CREATE ROLE user3 WITH LOGIN PASSWORD 'password3';
 
 ```
-![](17.png)
+```
+CREATE ROLE
+my_database=#
+```
 
 ```
 \du
 ```
-![](18.png)
+```
+List of roles
+Role name
+Attributes
+delhi
+gurugram
+notda
+postgres
+user 1
+user2
+user 3
+my_database=#
+Superuser, Create role, Create DB, Replication, Bypass RLS
+```
 - show user
 
 
