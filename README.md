@@ -35,7 +35,7 @@
 
 
 ## 2. Environment details: 
-- OS- Ubuntu 22.04.3 LTS
+- OS- Ubuntu 22.04.3 LTS (Download Link Here ) (https://ubuntu.com/download/desktop) 
 - Podman- 3.4.4
 - Psql- (PostgreSQL) 14.9
 
