@@ -67,7 +67,7 @@ which is used for data storage and management.
 sudo apt-get update
 ```
 
-## input
+## output
 
 ```
 - https://brave-browser-apt-release.s3.brave.com stable InRelease
@@ -106,7 +106,7 @@ Fetched 4,064 kB in 15s (268 kB/s) Reading package lists... Done
 sudo apt install -y podman
 
 ```
-## input
+## output
 
 ```
 Reading package lists... Done
@@ -137,7 +137,7 @@ prince@123:-$
 podman version
 ```
 
-## input 
+## output
 
 ```
 Version: 3.4.4
@@ -155,6 +155,9 @@ linux/amd64
 podman run --name postgres-container -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 docker.io/library/postgres:latest
 
 ```
+
+## output
+
 ```
 prince@123:-$ podman run-name postgres-container -e POSTGRES_PASSWORD=mysecretpassword dp 5432:5432 docker.to/library/postgres: latest 413a4432f26d5fb9f7358c447c17502b66054a0e1aa35a09fd67d628731502e2
 prince@123:-$
