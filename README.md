@@ -264,12 +264,14 @@ postgres=#
     email VARCHAR(100) UNIQUE
 );
 
-
 ```
-
-
-![](9.png)
-
+```
+my_database=#
+CREATE TABLE users (
+id SERIAL PRIMARY KEY, first_name VARCHAR(50), last_name VARCHAR(50), email VARCHAR(100) UNIQUE
+);
+CREATE TABLE my_database=#
+```
 
 - **CREATE TABLE:** This keyword tells the database to create a new table.
   
@@ -286,10 +288,10 @@ postgres=#
 ```
 CREATE EXTENSION pg_trgm;
 ```
-
-
-
-![](10.png)
+```
+CREATE EXTENSION
+my_database=#
+```
 
 **EXTENSION** This SQL statement is used to create or activate an extension in the PostgreSQL database. Extensions are additional modules or functions that extend PostgreSQL database functionality.
 
@@ -309,9 +311,10 @@ What are the reasons for using these capabilities? For example, you can use thes
 INSERT INTO users (first_name, last_name, email) VALUES ('John', 'Doe', 'john.doe@example.com');
 
 ```
-
-![](11.png)
-
+```
+INSERT 0 1
+my_database=#
+```
 
 - **id:** A serial column that is the primary key of the table. This means that each row in the table will have a unique id value.
 - **name:** A VARCHAR column that stores the name of the hospital.
@@ -327,10 +330,15 @@ INSERT INTO users (first_name, last_name, email) VALUES ('John', 'Doe', 'john.do
 SELECT * FROM users;
 
 ```
-
-![](12.png)
-
-
+```
+id | first_name | last_name |
+email
+1 | John
+john.doe@example.com
+(1 row)
+my_database=#
+| Doe
+```
 
 
 ## (C ) Update
@@ -341,7 +349,9 @@ UPDATE users SET email = 'new.email@example.com' WHERE id = 1;
 
 ```
 
-![](13.png)
+
+UPDATE 1
+my_database=#
 
 
 
