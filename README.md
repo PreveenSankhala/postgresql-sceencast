@@ -8,7 +8,7 @@
 
 **1. Task requirement**
 
-**2. Tools required**
+**2. Tools Use**
 
 **3. Environment details**
 
@@ -34,13 +34,14 @@
 - Postgres
 
 
-## 2. Environment details: 
+## 2. Environment details (minimum): 
 - OS- Ubuntu 22.04.3 LTS (Download Link Here ) (https://ubuntu.com/download/desktop) 
-- Podman- 3.4.4
+- Podman- 3.4.4 
 - Psql- (PostgreSQL) 14.9
 
 
 ## 3. System configuration:
+
 - CPU - 4
 - Storage -16 GB
 
