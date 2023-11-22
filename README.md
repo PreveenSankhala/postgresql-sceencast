@@ -28,7 +28,7 @@
 
 
 
-## 2. Tools required:
+## 2. Tools use:
 
 - Podman
 - Postgres
@@ -40,10 +40,14 @@
 - Psql- (PostgreSQL) 14.9
 
 
-## 3. System configuration:
+## 3. System Configuration (Minimum):
 
-- CPU - 4
-- Storage -16 GB
+- **CPU:** Quad-core processor
+  - Details: Intel Core i5 (4th Gen)
+
+- **Storage:** 16 GB
+  - Details: 16 GB DDR4 RAM
+
 
 
 
