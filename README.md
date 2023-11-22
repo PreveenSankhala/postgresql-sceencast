@@ -186,6 +186,9 @@ prince@123:-$
 ```
 podman ps
 ```
+## output
+
+
 ```
 prince@123:-$ podman ps
 CONTAINER ID IMAGE
@@ -212,6 +215,10 @@ postgres-container
 podman exec -it postgres-container psql -U postgres
 
 ```
+
+## output
+
+
 ```
 prince@123:-$ podman execit postgres-container psql -U postgres psql (16.0 (Debian 16.0-1.pgdg120+1))
 Type "help" for help.
@@ -242,6 +249,9 @@ CREATE USER noida WITH PASSWORD 'noida1';
 CREATE USER delhi WITH PASSWORD 'delhi1';
 CREATE USER gurugram WITH PASSWORD 'gurugram1';
 ```
+
+## output
+
 ```
 postgres # CREATE USER noida WITH PASSWORD 'noidal';
 CREATE USER delht WITH PASSWORD delhii'; CREATE USER gurugram WITH PASSWORD 'gurugram1';
@@ -257,6 +267,9 @@ postgres=#
 CREATE DATABASE my_database;
 
 ```
+
+## output
+
 ```
 postgres=# CREATE DATABASE my_database;
 CREATE DATABASE
@@ -282,6 +295,10 @@ postgres=#
 );
 
 ```
+
+## output
+
+
 ```
 my_database=#
 CREATE TABLE users (
@@ -305,6 +322,10 @@ CREATE TABLE my_database=#
 ```
 CREATE EXTENSION pg_trgm;
 ```
+
+## output
+
+
 ```
 CREATE EXTENSION
 my_database=#
@@ -328,10 +349,14 @@ What are the reasons for using these capabilities? For example, you can use thes
 INSERT INTO users (first_name, last_name, email) VALUES ('John', 'Doe', 'john.doe@example.com');
 
 ```
+
+## output
+
 ```
 INSERT 0 1
 my_database=#
 ```
+
 
 - **id:** A serial column that is the primary key of the table. This means that each row in the table will have a unique id value.
 - **name:** A VARCHAR column that stores the name of the hospital.
@@ -347,6 +372,9 @@ my_database=#
 SELECT * FROM users;
 
 ```
+## output
+
+
 ```
 id | first_name | last_name |
 email
@@ -365,11 +393,12 @@ my_database=#
 UPDATE users SET email = 'new.email@example.com' WHERE id = 1;
 
 ```
+## update
 
-
+```
 UPDATE 1
 my_database=#
-
+```
 
 
 ## (D) Delete
@@ -377,6 +406,8 @@ my_database=#
 DELETE FROM users WHERE id = 1;
 
 ```
+
+## update
 
 ```
 DELETE 1
@@ -387,6 +418,9 @@ my_database=#
 ```
 CREATE ROLE user1 WITH LOGIN PASSWORD 'password1';
 ```
+
+## output
+
 ```
 CREATE ROLE
 my_database=#
@@ -396,6 +430,10 @@ my_database=#
 CREATE ROLE user2 WITH LOGIN PASSWORD 'password2';
 
 ```
+
+## output
+
+
 ```
 CREATE ROLE
 my_database=#
@@ -405,14 +443,22 @@ my_database=#
 CREATE ROLE user3 WITH LOGIN PASSWORD 'password3';
 
 ```
+
+## output
+
+
 ```
 CREATE ROLE
 my_database=#
 ```
 
+
 ```
 \du
 ```
+
+## output
+
 ```
 List of roles
 Role name
@@ -438,6 +484,10 @@ Superuser, Create role, Create DB, Replication, Bypass RLS
 ```
 GRANT SELECT ON public.users TO user1;
 ```
+
+## output
+
+
 ```
 GRANT
 my_database=#
@@ -449,15 +499,24 @@ my_database=#
 GRANT SELECT, INSERT, DELETE ON public.users TO user2;
 ```
 
+
+## output
+
+
 ```
 GRANT
 my_database=#
 ```
 
+
 - Give all permissions to user3
+  
 ```
 GRANT ALL PRIVILEGES ON public.users TO user3;
 ```
+
+## output
+
 
 ```
 GRANT
@@ -488,6 +547,7 @@ VALUES
     ('Olivia', 'Moore', 'olivia.moore@example.com'),
     ('Daniel', 'Wilson', 'daniel.wilson@example.com');
 ```
+## output
 
 ```
 INSERT 10
@@ -499,6 +559,9 @@ my_database=#
 ```
 \d users
 ```
+
+## output
+
 ```
 my database=# \
 d users
@@ -526,9 +589,13 @@ my_database=#
 
 
 **(b) Finding database size**
+
 ```
 SELECT pg_size_pretty(pg_database_size(current_database()));
 ```
+
+## output
+
 ```
 pg_size_pretty
 7700 kB
@@ -538,9 +605,11 @@ my database=#
 
 
 **(c) Table size**
+
 ```
 SELECT pg_size_pretty(pg_total_relation_size('users'));
 ```
+## output
 
 ```
 pg_size_pretty
