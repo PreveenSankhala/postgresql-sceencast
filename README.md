@@ -53,12 +53,6 @@
 
 
 
-Please note that these are minimal requirements, and for production or more demanding environments, you might need higher specifications. Additionally, PostgreSQL's performance can be influenced by factors like indexing, query complexity, and concurrent connections. Always refer to the [official documentation](https://www.postgresql.org/docs/) and consider your specific use case when determining system requirements.
-
-
-
-
-
 ## 4. Definition of tools:
 
 - **Podman** is an open-source container management tool used to create, run, and manage containers on Linux systems.
