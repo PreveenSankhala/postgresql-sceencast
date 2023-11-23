@@ -28,7 +28,7 @@
 
 
 
-## 2. Tools use:
+## 2. Tools used:
 
 - Podman
 - Postgresql
@@ -36,14 +36,14 @@
 
 ## 2. Environment details (minimum): 
 
-- OS- Ubuntu 22.04.3 LTS (Download Link Here ) (https://ubuntu.com/download/desktop) 
+- OS- Ubuntu 22.04.3 LTS (Download link :- https://ubuntu.com/download/desktop) 
 - Podman- 3.4.4 
 - Psql- (PostgreSQL) 14.9
 
 
 ## 3 Minimum System Requirements for PostgreSQL:
 
-- **CPU:** Dual-core processor 
+- **CPU:** 2 
   
 
 - **RAM:** 2 GB
@@ -561,7 +561,7 @@ VALUES
     ('Olivia', 'Moore', 'olivia.moore@example.com'),
     ('Daniel', 'Wilson', 'daniel.wilson@example.com');
 ```
-## output
+- output
 
 ```
 INSERT 10
