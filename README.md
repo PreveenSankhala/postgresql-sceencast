@@ -136,6 +136,7 @@ prince@123:-$
 podman version
 ```
 
+
 ## output
 
 
@@ -149,16 +150,42 @@ OS/Arch:
 linux/amd64
 
 
+## Create a postgresql container using podman
+
 ```
 podman run --name postgres-container -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 docker.io/library/postgres:latest
 
 ```
 
+
+
 ## output
 
 
-prince@123:-$ podman run-name postgres-container -e POSTGRES_PASSWORD=mysecretpassword dp 5432:5432 docker.to/library/postgres: latest 413a4432f26d5fb9f7358c447c17502b66054a0e1aa35a09fd67d628731502e2
-prince@123:-$
+docker.io/library/postgres:latest
+Trying to pull docker.io/library/postgres:latest...
+Getting image source signatures
+Copying blob b66a9305e34c done  
+Copying blob 1f7ce2fa46ab done  
+Copying blob 0829252d0d9a done  
+Copying blob a797f18545f0 done  
+Copying blob 969823a73455 done  
+Copying blob 3cf63429c214 done  
+Copying blob 799c670608dc done  
+Copying blob 870cc573d452 done  
+Copying blob fb2a58049417 done  
+Copying blob 79e525202743 done  
+Copying blob a3104899b78b done  
+Copying blob 43ef4fb89a17 done  
+Copying blob bbf10b4ac81d done  
+Copying config 2167863c43 done  
+Writing manifest to image destination
+Storing signatures
+48cfb9e951b6db3a67fabd25284a3ea79904f7c79abc566d25e66d799f83a89c
+prince@123:~$ 
+
+
+## command Definition
 
 
 - **podman run:** This is the command used to run containers with Podman, an alternative containerization tool to Docker.
