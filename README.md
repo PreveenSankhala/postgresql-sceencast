@@ -69,7 +69,7 @@ sudo apt-get update
 
 ## output
 
-```
+
 - https://brave-browser-apt-release.s3.brave.com stable InRelease
 Hit:1 Hit:2 http://in.archive.ubuntu.com/ubuntu jammy InRelease
 Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
@@ -86,7 +86,6 @@ Get:14 Get:15 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 D
 Get:16 http://in.archive.ubuntu.com/ubuntu jammy-backports/main amd64 DEP-11 Metadata [4,940 B]
 Get:17 http://in.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 DEP-11 Metadata [18.8 kB]
 Fetched 4,064 kB in 15s (268 kB/s) Reading package lists... Done
-```
 
 
 
