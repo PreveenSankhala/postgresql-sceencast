@@ -87,7 +87,7 @@ Get:16 http://in.archive.ubuntu.com/ubuntu jammy-backports/main amd64 DEP-11 Met
 Get:17 http://in.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 DEP-11 Metadata [18.8 kB]
 Fetched 4,064 kB in 15s (268 kB/s) Reading package lists... Done
 
-## command definition
+## command Definition
 
 - **sudo:** "Sudo" stands for "Superuser Do." It is used in Linux to execute a command as the root (admin) user, allowing the command to run with root privileges.
 
@@ -105,7 +105,7 @@ Fetched 4,064 kB in 15s (268 kB/s) Reading package lists... Done
 sudo apt install -y podman
 
 ```
-## output
+- output
 
 
 Reading package lists... Done
@@ -137,7 +137,7 @@ podman version
 ```
 
 
-## output
+- output
 
 
 Version: 3.4.4
@@ -159,7 +159,7 @@ podman run --name postgres-container -e POSTGRES_PASSWORD=mysecretpassword -d -p
 
 
 
-## output
+- output
 
 
 docker.io/library/postgres:latest
@@ -211,27 +211,15 @@ prince@123:~$
 ```
 podman ps
 ```
-## output
+
+- output
 
 
-```
-prince@123:-$ podman ps
-CONTAINER ID IMAGE
-COMMAND
-CREATED
-STATUS
-PORTS
-docker.to/library/postgres:
-postgres
-15 seconds ago
-Up 15 seconds ago
-NAMES
-413a4432f26d
-prince@123:-$
-latest
-0.0.0.0:5432->5432/tcp
-postgres-container
-```
+
+CONTAINER ID  IMAGE                              COMMAND     CREATED        STATUS            PORTS                   NAMES
+48cfb9e951b6  docker.io/library/postgres:latest  postgres    6 minutes ago  Up 6 minutes ago  0.0.0.0:5432->5432/tcp  postgres-container
+
+
 
 ## Connect Postgres container
 
