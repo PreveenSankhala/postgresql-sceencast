@@ -498,7 +498,7 @@ my_database=#
 
 ## 5. Grant select permission for user1,select,insert,delete for user2 and all for user3.
 
-** Granting selection permission to user1: **
+# Granting selection permission to user1: 
 
 
 ```
@@ -512,7 +512,7 @@ my_database=#
 
 
 
-- To grant select, insert, and delete permissions to user2:
+# To grant select, insert, and delete permissions to user2:
 
 ```
 GRANT SELECT, INSERT, DELETE ON public.users TO user2;
@@ -525,7 +525,7 @@ GRANT
 my_database=# 
 
 
-- Give all permissions to user3
+# Give all permissions to user3
   
 ```
 GRANT ALL PRIVILEGES ON public.users TO user3;
