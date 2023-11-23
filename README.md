@@ -574,7 +574,7 @@ my_database=#
 \d users
 ```
 
-## output
+- output
 
 ```
 my database=# \
@@ -608,7 +608,7 @@ my_database=#
 SELECT pg_size_pretty(pg_database_size(current_database()));
 ```
 
-## output
+- output
 
 ```
 pg_size_pretty
@@ -623,7 +623,7 @@ my database=#
 ```
 SELECT pg_size_pretty(pg_total_relation_size('users'));
 ```
-## output
+- output
 
 ```
 pg_size_pretty
