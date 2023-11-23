@@ -304,6 +304,7 @@ You are now connected to database "my_database" as user "postgres".
 my_database=# 
 
 
+- Table create
 
 ```
      CREATE TABLE users (
