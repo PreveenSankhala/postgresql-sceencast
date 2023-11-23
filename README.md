@@ -563,11 +563,11 @@ VALUES
 ```
 - output
 
-```
+
 INSERT 10
 my_database=#
 
-```
+
 
 **(a) Table structure**
 ```
@@ -576,7 +576,7 @@ my_database=#
 
 - output
 
-```
+
 my database=# \
 d users
 Column
@@ -599,7 +599,7 @@ Indexes:
 "users_pkey" PRIMARY KEY, btree (id)
 "users_email_key" UNIQUE CONSTRAINT, btree (email)
 my_database=#
-```
+
 
 
 **(b) Finding database size**
@@ -610,12 +610,12 @@ SELECT pg_size_pretty(pg_database_size(current_database()));
 
 - output
 
-```
+
 pg_size_pretty
 7700 kB
 (1 row)
 my database=#
-```
+
 
 
 **(c) Table size**
@@ -625,10 +625,10 @@ SELECT pg_size_pretty(pg_total_relation_size('users'));
 ```
 - output
 
-```
+
 pg_size_pretty
 40 kB
 (1 row)
 my_database=#
-```
+
 
