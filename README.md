@@ -43,7 +43,7 @@
 
 ## 3 Minimum System Requirements for PostgreSQL:
 
-- **CPU:** Dual-core processor
+- **CPU:** Dual-core processor 
   
 
 - **RAM:** 2 GB
