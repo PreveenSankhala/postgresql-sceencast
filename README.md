@@ -99,7 +99,7 @@ Fetched 4,064 kB in 15s (268 kB/s) Reading package lists... Done
 
 
 
-## 1. Create a postgres container using podman
+## 1. install podman
 
 ```
 sudo apt install -y podman
@@ -185,6 +185,8 @@ Storing signatures
 prince@123:~$ 
 
 
+
+
 ## command Definition
 
 
@@ -212,6 +214,7 @@ prince@123:~$
 podman ps
 ```
 
+
 - output
 
 
@@ -229,14 +232,17 @@ podman exec -it postgres-container psql -U postgres
 
 ```
 
-## output
+- output
 
 
-```
-prince@123:-$ podman execit postgres-container psql -U postgres psql (16.0 (Debian 16.0-1.pgdg120+1))
+psql (16.1 (Debian 16.1-1.pgdg120+1))
 Type "help" for help.
-postgres=#
-```
+
+postgres=# 
+
+
+## command Definition
+
 
 - **podman:** This is the command-line tool for managing containers, similar to Docker.
 
@@ -263,16 +269,13 @@ CREATE USER delhi WITH PASSWORD 'delhi1';
 CREATE USER gurugram WITH PASSWORD 'gurugram1';
 ```
 
-## output
+- output
 
-```
-postgres # CREATE USER noida WITH PASSWORD 'noidal';
-CREATE USER delht WITH PASSWORD delhii'; CREATE USER gurugram WITH PASSWORD 'gurugram1';
+
 CREATE ROLE
 CREATE ROLE
 CREATE ROLE
-postgres=#
-```
+postgres=# 
 
 
 ## (b) Databases
@@ -281,22 +284,25 @@ CREATE DATABASE my_database;
 
 ```
 
-## output
+- output
 
-```
-postgres=# CREATE DATABASE my_database;
 CREATE DATABASE
 postgres=#
-```
 
 
 ## (c) Tables
 
 - connect database
+  
 
 ```
 \c my_database;
 ```
+- output
+  
+You are now connected to database "my_database" as user "postgres".
+my_database=# 
+
 
 
 ```
@@ -309,7 +315,10 @@ postgres=#
 
 ```
 
-## output
+- output
+  
+CREATE TABLE
+my_database=# 
 
 
 ```
