@@ -67,7 +67,7 @@ which is used for data storage and management.
 sudo apt-get update
 ```
 
-## output
+- output
 
 
 - https://brave-browser-apt-release.s3.brave.com stable InRelease
@@ -87,7 +87,7 @@ Get:16 http://in.archive.ubuntu.com/ubuntu jammy-backports/main amd64 DEP-11 Met
 Get:17 http://in.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 DEP-11 Metadata [18.8 kB]
 Fetched 4,064 kB in 15s (268 kB/s) Reading package lists... Done
 
-
+## command definition
 
 - **sudo:** "Sudo" stands for "Superuser Do." It is used in Linux to execute a command as the root (admin) user, allowing the command to run with root privileges.
 
