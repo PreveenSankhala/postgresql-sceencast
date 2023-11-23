@@ -10,7 +10,7 @@
 
 **2. Tools Use**
 
-**3. Environment details**
+**3. Minimum System Requirements for PostgreSQL**
 
 **4. System configuration**
 
