@@ -264,7 +264,7 @@ postgres=#
 
 ## (a) Create Users
 ```
-CREATE USER noida WITH PASSWORD 'noida1';
+CREATE USER noida WITH PASSWORD 'noida1';To grant select, insert, and delete 
 CREATE USER delhi WITH PASSWORD 'delhi1';
 CREATE USER gurugram WITH PASSWORD 'gurugram1';
 ```
