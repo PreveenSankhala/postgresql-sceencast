@@ -107,7 +107,7 @@ sudo apt install -y podman
 ```
 ## output
 
-```
+
 Reading package lists... Done
 Building dependency tree... Done Reading state information... Done
 Suggested packages:
@@ -130,7 +130,7 @@ Created symlink /etc/systemd/system/default.target.wants/podman-auto-update.serv
 Created symlink /etc/systemd/system/timers.target.wants/podman-auto-update.timer/lib/systemd/system/podman-auto-update.timer. Created symlink /etc/systemd/system/default.target.wants/podman-restart.service/lib/systemd/system/podman-restart.service.
 Processing triggers for man-db (2.10.2-1)...
 prince@123:-$
-```
+
 
 ```
 podman version
@@ -138,7 +138,7 @@ podman version
 
 ## output
 
-```
+
 Version: 3.4.4
 API Version: 3.4.4
 Go Version:
@@ -147,7 +147,6 @@ Built:
 Thu Jan 1 05:30:00 1970
 OS/Arch:
 linux/amd64
-```
 
 
 ```
@@ -157,10 +156,10 @@ podman run --name postgres-container -e POSTGRES_PASSWORD=mysecretpassword -d -p
 
 ## output
 
-```
+
 prince@123:-$ podman run-name postgres-container -e POSTGRES_PASSWORD=mysecretpassword dp 5432:5432 docker.to/library/postgres: latest 413a4432f26d5fb9f7358c447c17502b66054a0e1aa35a09fd67d628731502e2
 prince@123:-$
-```
+
 
 - **podman run:** This is the command used to run containers with Podman, an alternative containerization tool to Docker.
 
