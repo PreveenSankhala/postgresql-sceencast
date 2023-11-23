@@ -498,7 +498,7 @@ my_database=#
 
 ## 5. Grant select permission for user1,select,insert,delete for user2 and all for user3.
 
-- Granting selection permission to user1:
+** Granting selection permission to user1: **
 
 
 ```
