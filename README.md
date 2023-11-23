@@ -321,13 +321,7 @@ CREATE TABLE
 my_database=# 
 
 
-```
-my_database=#
-CREATE TABLE users (
-id SERIAL PRIMARY KEY, first_name VARCHAR(50), last_name VARCHAR(50), email VARCHAR(100) UNIQUE
-);
-CREATE TABLE my_database=#
-```
+## command Definition
 
 - **CREATE TABLE:** This keyword tells the database to create a new table.
   
@@ -341,17 +335,19 @@ CREATE TABLE my_database=#
 
 
 ## (d)  Extensions
+
 ```
 CREATE EXTENSION pg_trgm;
 ```
 
-## output
+- output
 
 
-```
 CREATE EXTENSION
 my_database=#
-```
+
+## command Definition
+
 
 **EXTENSION** This SQL statement is used to create or activate an extension in the PostgreSQL database. Extensions are additional modules or functions that extend PostgreSQL database functionality.
 
@@ -372,12 +368,12 @@ INSERT INTO users (first_name, last_name, email) VALUES ('John', 'Doe', 'john.do
 
 ```
 
-## output
+- output
 
-```
 INSERT 0 1
-my_database=#
-```
+my_database=# 
+
+## command Definition
 
 
 - **id:** A serial column that is the primary key of the table. This means that each row in the table will have a unique id value.
@@ -394,18 +390,15 @@ my_database=#
 SELECT * FROM users;
 
 ```
-## output
+- output
 
-
-```
-id | first_name | last_name |
-email
-1 | John
-john.doe@example.com
+ id | first_name | last_name |        email         
+----+------------+-----------+----------------------
+  1 | John       | Doe       | john.doe@example.com
 (1 row)
-my_database=#
-| Doe
-```
+
+my_database=# 
+
 
 
 ## (C ) Update
@@ -415,12 +408,12 @@ my_database=#
 UPDATE users SET email = 'new.email@example.com' WHERE id = 1;
 
 ```
-## output
+- output
 
-```
 UPDATE 1
-my_database=#
-```
+my_database=# 
+
+
 
 
 ## (D) Delete
@@ -429,73 +422,76 @@ DELETE FROM users WHERE id = 1;
 
 ```
 
-## output
+- output
 
-```
 DELETE 1
-my_database=#
-```
+my_database=# 
+
+
 
 ## 4. Create three users with a password.
+
+- 1 user create
+  
 ```
 CREATE ROLE user1 WITH LOGIN PASSWORD 'password1';
 ```
 
-## output
+- output
 
-```
 CREATE ROLE
 my_database=#
-```
 
+
+- 2 user create
+  
 ```
 CREATE ROLE user2 WITH LOGIN PASSWORD 'password2';
 
 ```
 
-## output
+- output
 
-
-```
 CREATE ROLE
 my_database=#
-```
 
+
+- 3 user create
+  
 ```
 CREATE ROLE user3 WITH LOGIN PASSWORD 'password3';
 
 ```
 
-## output
+- output
 
 
-```
 CREATE ROLE
-my_database=#
-```
+my_database=# 
 
+
+## List all user
 
 ```
 \du
 ```
 
-## output
+- output
 
-```
-List of roles
-Role name
-Attributes
-delhi
-gurugram
-notda
-postgres
-user 1
-user2
-user 3
-my_database=#
-Superuser, Create role, Create DB, Replication, Bypass RLS
-```
-- show user
+
+ List of roles
+ Role name |                         Attributes                         
+-----------+------------------------------------------------------------
+ delhi     | 
+ gurugram  | 
+ noida     | 
+ postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS
+ user1     | 
+ user2     | 
+ user3     | 
+
+my_database=# 
+
 
 
 
@@ -503,17 +499,17 @@ Superuser, Create role, Create DB, Replication, Bypass RLS
 
 - Granting selection permission to user1:
 
+
 ```
 GRANT SELECT ON public.users TO user1;
 ```
 
-## output
+- output
 
-
-```
 GRANT
-my_database=#
-```
+my_database=# 
+
+
 
 - To grant select, insert, and delete permissions to user2:
 
@@ -522,13 +518,10 @@ GRANT SELECT, INSERT, DELETE ON public.users TO user2;
 ```
 
 
-## output
+- output
 
-
-```
 GRANT
-my_database=#
-```
+my_database=# 
 
 
 - Give all permissions to user3
@@ -537,13 +530,11 @@ my_database=#
 GRANT ALL PRIVILEGES ON public.users TO user3;
 ```
 
-## output
+- output
 
-
-```
 GRANT
-my_database=#
-```
+my_database=# 
+
 
 
 
